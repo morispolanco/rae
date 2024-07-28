@@ -6,7 +6,7 @@ import json
 st.set_page_config(page_title="Asistente de Lengua Española", page_icon="🇪🇸")
 
 # Título de la aplicación
-st.title("Asistente de Lengua Española 🇪🇸")
+st.title("Asistente de Lengua Española")
 
 # Obtener la API key de los secrets de Streamlit
 api_key = st.secrets["api_key"]
