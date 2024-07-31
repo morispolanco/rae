@@ -1,6 +1,20 @@
 import streamlit as st
 import requests
 import json
+import os
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+def keep_alive():
+    # Código para mantener la app activa
+    print("App still alive!")
+
+sched = BlockingScheduler()
+
+@sched.scheduled_job('interval', minutes=30)
+def timed_job():
+    keep_alive()
+
+sched.start()
 
 # Configuración de la página
 st.set_page_config(page_title="Asistente de Lengua Española", page_icon="🇪🇸")
